@@ -64,7 +64,7 @@ print(a.upper())
 print(a.lower())
 
 # 공백 제거
-d = "              p           "
+d = "              py           "
 print(d.lstrip())
 print(d.rstrip())
 print(d.strip())
@@ -74,8 +74,8 @@ a = "Pithon"
 # a[1] = 'y' # 오류 발생
 
 # 문자열 바꾸기
-a = "Python is difiicult."
-print(a.replace("difiicult", "funny"))
+a = "Python is difficult."
+print(a.replace("difficult", "funny"))
 print(a)
 
 # 문자열 나누기
@@ -139,6 +139,10 @@ print(a.index(9))
 
 # 원소 삽입
 a.insert(0, 99)
+print(a)
+
+# 원소 삭제
+a.remove(99)
 print(a)
 
 b = [1, 2, 3]
@@ -288,10 +292,10 @@ number = 0
 for score in [90, 25, 67, 45, 93]:
     number += 1
 
-if score > 60:
-    print("%d번 학생은 합격입니다." % number)
-else:
-    print("%d번 학생은 불합격입니다." % number)
+    if score > 60:
+        print("%d번 학생은 합격입니다." % number)
+    else:
+        print("%d번 학생은 불합격입니다." % number)
 
 # while 문
 i = 0
@@ -307,7 +311,7 @@ def sum1(a, b):
 def sum2(*args):
     x = 0
     for i in args:
-        x += 1
+        x += i
     return x
 
 # 함수 호출
@@ -379,7 +383,7 @@ c = input("값을 입력해주세요:")
 print(c)
 
 # 사용자 입력으로 받은 값을 문자열로 반환2
-c = input("정수를 입력하세요:")
+c = input("정수를 입력하세요: ")
 print(c)
 
 # 입력 받은 숫자에 해당되는 범위의 값을 반환
@@ -400,8 +404,12 @@ print(sorted('Python'))
 # 패키지, 모듈 사용
 # Request('http://www.sunmoon.ac.kr') # 오류 발생
 
+import urllib.request
+urllib.request.Request('http://www.sunmoon.ac.kr')
+
 import pandas
 pandas.DataFrame()
+
 from datetime import datetime
 datetime.now()
 
@@ -415,7 +423,7 @@ f.close()
 # 파일 쓰기
 f = open('example.txt', 'w')
 for i in range(1, 6):
-    data = '%d번쨰 줄입니다. \n' % i
+    data = '%d번째 줄입니다. \n' % i
     f.write(data)
 f.close()
 
