@@ -1,6 +1,6 @@
 a = 3
 b = 4
-#asdsad
+#성공
 # 지수승
 print(a ** b)
 print(a ** 3)
