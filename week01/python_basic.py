@@ -382,6 +382,8 @@ print(pow(2, 4))
 c = input("값을 입력해주세요:")
 print(c)
 
+#ww3
+
 # 사용자 입력으로 받은 값을 문자열로 반환2
 c = input("정수를 입력하세요: ")
 print(c)
