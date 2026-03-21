@@ -9,4 +9,4 @@ print(sample.tail)
 sample.info()
 sample.describe()
 
-sample
+sample_dic
