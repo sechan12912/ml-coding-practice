@@ -29,7 +29,7 @@ housing = strat_train_set.drop("median_house_value", axis=1)
 housing_labels = strat_train_set["median_house_value"].copy()
 
 # 데이터 정제
-# null 값이 있는 행 확인하기
+# null 값이 있는행 확인하기
 null_rows_idx = housing.isnull().any(axis=1)
 housing.loc[null_rows_idx].head()
 
@@ -44,9 +44,9 @@ housing_num.head()
 imputer.fit(housing_num)
 
 print(imputer.statistics_)           # imputer 결과 값
-print(housing_num.median().values)   # 수동으로 계산한 중간값
+print(housing_num.median().values)   #수동으로 계산한 중간값
 
-# 훈련 세트의 누락값을 imputer가 학습한 값으로 채우기
+#훈련 세트의 누락값을 imputer가 학습한 값으로 채우기
 X = imputer.transform(housing_num)
 
 imputer.feature_names_in_
@@ -64,4 +64,4 @@ outlier_pred = isolation_forest.fit_predict(X)
 outlier_pred
 
 housing = housing.iloc[outlier_pred == 1]
-housing_labels = housing_labels.iloc[outlier_pred == 1]
+housing_labels = housing_labels.iloc[outlier_pred ==1]
