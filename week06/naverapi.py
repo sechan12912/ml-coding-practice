@@ -34,4 +34,5 @@ with open('%s_naver_%s.json' % (srcText, node), 'w', encoding = 'utf8') as outfi
     outfile.write(jsonFile)
 
 print("가져온 데이터 : %d 건" %(cnt))
-print('%s_naver_')
+print('%s_naver_%s.json SAVED' % (srcText, node))
+
