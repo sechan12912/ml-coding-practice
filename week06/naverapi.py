@@ -52,8 +52,8 @@ def getNaverSearch(node, srcText, page_start, display):
 def getRequestUrl(url):
     req = urllib.request.Request(url)
 
-    req.add_header("X-Naver-Client-Id", client_id)
-    req.add_header("X-Naver-Client-Secret", client_secret)
+    req.add_header("X-Naver-Client-Id", yRPNzjwg1w3kMYbDDMNM)
+    req.add_header("X-Naver-Client-Secret", mZqhcalcQ_)
 
     try:
         response = urllib.request.urlopen(req)
