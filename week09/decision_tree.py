@@ -111,6 +111,3 @@ plt.legend(loc=(0.32, 0.67))
 
 plt.show()
 
-import os
-print("현재 작업 디렉토리:", os.getcwd())
-print("현재 폴더의 파일 목록:", os.listdir())
