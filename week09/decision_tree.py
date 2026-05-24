@@ -23,3 +23,25 @@ from graphviz import Source
 
 Source.from_file("iris_tree.dot")
 
+# 클래스 확률 추정
+
+print(tree_clf.predict_proba([[5, 1.5]]).round(3))
+print(tree_clf.predict([[5, 1.5]]))
+
+# 규제 매개변수
+
+from sklearn.datasets import make_moons
+
+X_moons, y_moons = make_moons(n_samples=150, noise=0.2, random_state=42)
+
+tree_clf1 = DecisionTreeClassifier(random_state=42)
+tree_clf2 = DecisionTreeClassifier(min_samples_leaf=5, random_state=42)
+tree_clf1.fit(X_moons, y_moons)
+tree_clf2.fit(X_moons, y_moons)
+
+X_moons_test, y_moons_test = make_moons(n_samples=1000, noise=0.2,
+                                        random_state=43)
+
+print(tree_clf1.score(X_moons_test, y_moons_test))
+print(tree_clf2.score(X_moons_test, y_moons_test))
+
